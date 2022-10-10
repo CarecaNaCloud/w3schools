@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+  background-color: green;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+ 
+.dropbtn:hover, .dropbtn:focus {background-color: limeGreen}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: floralWhite;
+  box-shadow: 0px 8px 16px 0px rgba(96,57,57,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: saddleBrown;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display: block}
+</style>
+</head>
+<body>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+ 
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      let dropdowns = document.getElementByClassName("dropdown-content");
+      for (let i = 0; i < dropdowns.length; i++) {
+        let openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdow.classList.remove('show');
+        }
+      }
+    }
+  }    
+</script>
+  
+</body>
+</html>
