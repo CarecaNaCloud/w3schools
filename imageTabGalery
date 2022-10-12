@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.column {
+  float: left;
+  width: 150px;
+  padding: 10px;
+}
 
+.colum img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+}
+
+#imgtext {
+  postion: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+  
+
+</style>
+</head>
+<body>
+
+<!-- Images -->
+
+  <div class="row">
+    <div class="column">
+      <img src="" alt="" onclick="myFunction(this);">
+    </div>
+  	<div class="column">
+      <img src="" alt="" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="" alt="" onclick="myFunction(this);">
+    </div>
+    <div classs="column">
+      <img src="" alt="" onclick="myFunction(this);">
+    </div>
+  </div>
+  
+  <!-- Container  -->
+  
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg">
+    <div id="imgText"></div>
+    
+  </div>
+    
+<script>
+
+  function myFunction(imgs) {
+    let expandImg = document.getElementById("expandImg");
+    let imgText = documen.getElementById("imgTxt");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+    
+</script>
+    
+</body>
+</html>
