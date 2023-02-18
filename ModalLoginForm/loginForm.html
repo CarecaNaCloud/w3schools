@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <button onClick="showModal()">Login</button>
+  
+  <div id="modalWraper" class="modal">
+    <span id="closeModal">&times;</span>
+
+    <form class="modalContent modalAnimation" action="post">
+      
+      <div class="imgContainer">
+        <img class="avatar" src="#" alt="#">
+      </div>
+      
+      <div class="container">
+        <label for="userName">Username</label>
+        <input type="text" name="userName" id="userName"placeholder="Enter password" />
+      
+        <label for="psw">Password</label>
+        <input type="password" name="psw" id="psw" placeholder="Enter your password" required />
+
+        <button type="submit">Login</button>
+        
+        <label for="">
+          <input type="checkbox" name="remember" id="remember" checked="checked">
+          Remember me
+        </label>
+
+      </div>
+
+      <div class="cancelAndForgotChoices">
+        <button class="cancelBtn" type="button" onClick="closeModal()">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+</body>
+</html>
